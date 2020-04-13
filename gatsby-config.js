@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Emslie`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -14,7 +14,16 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    "gatsby-plugin-catch-links",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/pages/posts`,
+      },
+    },
     `gatsby-plugin-sharp`,
+    "gatsby-transformer-remark",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
